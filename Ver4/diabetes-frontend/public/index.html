@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+</head>
+
+<body>
+    <h2️>Enter Patient Data</h2️>
+    <form id="predictForm">
+        <input type="text" id="features" placeholder="Enter values comma-separated">
+        <button type="submit">Predict</button>
+    </form>
+    <h3 id="result"></h3>
+    <script>
+        document.getElementById("predictForm").addEventListener("submit", function (event)
+        {
+            event.preventDefault();
+            let features = document.getElementById("features").value.split(",").map(Number);
+            fetch("http://12️7.0.0.1:5000/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ features: features })
+            })
+                .then(response => response.json()).then(data =>
+                {
+                    document.getElementById("result").innerText =
+                        `Prediction: ${data.prediction} (Probability: ${data.probability.toFixed(2)})`;
+                });
+        });
+    </script>
+</body>
+
+</html>
