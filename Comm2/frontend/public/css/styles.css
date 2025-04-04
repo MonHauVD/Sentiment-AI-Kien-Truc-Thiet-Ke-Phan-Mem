@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+canvas {
+    width: 45%;
+    max-width: 400px;
+}
+
+.prediction textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#predictionResult {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+select {
+    width: 100%; /* Chiều rộng bằng phần tử cha */
+    max-width: 100%;
+    white-space: normal; /* Cho phép xuống dòng */
+    overflow-wrap: break-word; /* Ngăn chữ bị cắt, tự động xuống dòng */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Màu xen kẽ cho các ô chọn */
+select option:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+select option:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+/* Định dạng dropdown mở rộng theo nội dung */
+select option {
+    white-space: pre-wrap; /* Xuống dòng khi nội dung dài */
+    padding: 10px; /* Tăng kích thước option để dễ đọc hơn */
+    display: block; /* Hiển thị option như block để không bị cắt chữ */
+}
+#reviewDropdown {
+    width: 100%; /* Đảm bảo kích thước ngang bằng parent */
+    max-width: 100%;
+    white-space: normal; /* Cho phép xuống dòng */
+    overflow-wrap: break-word; /* Ngăn chữ bị cắt, tự động xuống dòng */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    min-height: 40px; /* Chiều cao tối thiểu */
+}
+
+/* Tăng chiều cao của dropdown khi có nhiều nội dung */
+#reviewDropdown option {
+    white-space: pre-wrap; /* Cho phép nội dung xuống dòng */
+    padding: 10px; /* Tăng khoảng cách trong option */
+    display: block; /* Đảm bảo option mở rộng theo nội dung */
+}
+
+/* Tự động tăng chiều cao khi mở dropdown */
+#reviewDropdown:focus {
+    height: auto; /* Mở rộng dropdown theo nội dung */
+    max-height: 300px; /* Giới hạn chiều cao tối đa */
+    overflow-y: auto; /* Bật thanh cuộn nếu nội dung quá nhiều */
+}
+
+/* Màu xen kẽ cho các tùy chọn */
+#reviewDropdown option:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+#reviewDropdown option:nth-child(even) {
+    background-color: #e6e6e6;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Trang Chủ</h1>
+
+    <canvas id="dataChart"></canvas>
+    <canvas id="accuracyChart"></canvas>
+
+    <h2>Dự đoán Review</h2>
+    <textarea id="reviewText" placeholder="Nhập review..."></textarea>
+    <select id="modelType">
+        <option value="CNN">CNN</option>
+        <option value="RNN">RNN</option>
+        <option value="LSTM">LSTM</option>
+    </select>
+    <button onclick="predictReview()">Dự đoán</button>
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

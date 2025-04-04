@@ -1,0 +1,8 @@
+django 
+tensorflow 
+pandas 
+mysqlclient 
+djangorestframework
+scikit-learn
+matplotlib
+django-cors-headers

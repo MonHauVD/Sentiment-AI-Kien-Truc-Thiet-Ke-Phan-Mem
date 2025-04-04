@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Sentiment Analysis</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis</h1>
+
+        <div class="charts">
+            <canvas id="dataDistributionChart"></canvas>
+            <canvas id="accuracyComparisonChart"></canvas>
+        </div>
+
+        <div class="prediction">
+            <h2>Predict Review Sentiment</h2>
+            
+            <div>
+                <label><input type="radio" name="inputType" value="free" checked id="inputFree"> Tự do</label>
+                <label><input type="radio" name="inputType" value="sample" id="inputSample"> Mẫu</label>
+            </div>
+
+            <textarea id="reviewInput" placeholder="Enter review here..."></textarea>
+            
+            <select id="reviewDropdown" style="display: none;" ></select>
+            <p id="originalSentiment" style="display: none;"></p>
+
+            <select id="modelSelect">
+                <option value="cnn">CNN</option>
+                <option value="rnn">RNN</option>
+                <option value="lstm">LSTM</option>
+            </select>
+            <button id="analyzeButton">Analyze</button>
+
+            <div id="predictionResult"></div>
+        </div>
+    </div>
+
+    <script type="module" src="js/charts.js"></script>
+    <script type="module" src="js/prediction.js"></script>
+</body>
+</html>
